@@ -1,0 +1,17 @@
+.welcome {
+    background-image: url("../../welcomePhoto.jpg");
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6));
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    margin-top: -3%;
+
+    @media(min-width: 769px) {
+        height: 400px;
+    }
+}

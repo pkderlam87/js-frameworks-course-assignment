@@ -1,0 +1,42 @@
+.btn-primary {
+    background-color: #0D0D0D;
+    color: #fff;
+    font-weight: 600;
+    width: 100px;
+    margin: 2% auto;
+    border-radius: 30px;
+    border-color: #0D0D0D;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #29323c, #485563, #4e4376);
+    box-shadow: 0 4px 10px 0 rgba(45, 54, 65, 0.75);
+    border: none;
+}
+
+.btn-primary:focus {
+    outline: none;
+    background-color: #485563;
+    border: none;
+    box-shadow: 0 4px 10px 0 rgba(45, 54, 65, 0.75);
+}
+
+.btn-navbar {
+    background-color: #0d0d0d00;
+    border: none;
+}
+
+.btn-navbar:focus {
+    background-color: #485563;
+    border: none;
+    box-shadow: none;
+}
