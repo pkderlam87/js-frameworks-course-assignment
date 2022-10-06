@@ -6,9 +6,8 @@
 @import "./partials/card";
 @import "./partials/loading";
 @import "./partials/welcomeSection";
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+@import "./partials/base";
+@import "./partials/navbar";
+@import "./partials/typography";
+@import "./partials/custom";
+@import "~bootstrap/scss/bootstrap";

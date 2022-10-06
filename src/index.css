@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Cyrene";
+  src: local("Cyrene"),
+    url("./fonts/Cyrene+Regular+Advanced.otf") format("OpenType");
+}

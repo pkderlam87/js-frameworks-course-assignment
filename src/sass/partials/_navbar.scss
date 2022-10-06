@@ -1,5 +1,21 @@
-.navbar-dark {
-    .navbar-toggler {
-        order: 2;
+.navbar {
+    justify-content: space-around !important;
+    z-index: 100;
+
+    .navbar-brand {
+        font-size: 2rem !important;
+        margin-left: 3% !important;
+
+        svg {
+            margin-left: 5%;
+        }
+
+        g {
+            stroke: #fff;
+        }
+
+        @media (min-width:992px) {
+            font-size: 3.4rem !important;
+        }
     }
 }

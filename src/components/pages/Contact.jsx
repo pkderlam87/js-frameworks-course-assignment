@@ -4,12 +4,13 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Container, FloatingLabel } from 'react-bootstrap';
 import { Form, Alert } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 import { DEFAULT_VALUES, SUBJECT_VALUES } from '../../constants/registration';
 import Select from 'react-select';
 import Heading from '../layout/Heading';
 
-
+/**
+ * YUP will verify the data requirements and show an error message if something is wrong 
+ */
 const schema = yup.object().shape({
     firstName: yup.string().required("Please enter your first name").min(3, "Your first name must be at least 3 characters"),
     lastName: yup.string().required("Please enter your last name").min(4, "Your last name must be at least 4 characters"),
@@ -17,6 +18,11 @@ const schema = yup.object().shape({
     subject: yup.mixed().required("Please select the subject"),
     message: yup.string().required("Please enter your message").min(10, "The message must be at least 10 characters"),
 });
+
+/**
+ * This function will provide the form
+ * @returns <Form>
+ */
 
 function Contact() {
     const [submitted, setSubmitted] = useState(false);
@@ -30,7 +36,9 @@ function Contact() {
     console.log(errors);
 
     return (
-        <Container>
+        <Container className="wrapper">
+            <section className='welcome__other--pages'>
+            </section>
             <Heading>Send your message to us &#128515;</Heading>
             {submitted && <Alert variant="success">Your message was sent!</Alert>}
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -73,7 +81,7 @@ function Contact() {
                     <Form.Control as="textarea" {...register("message")} style={{ height: '150px' }} placeholder="Message" />
                     {errors.message && <span>{errors.message.message}</span>}
                 </FloatingLabel>
-                <Button type="submit">Send</Button>
+                <button type="submit" className="btn btn-secondary">Send</button>
             </form>
         </Container>
     );

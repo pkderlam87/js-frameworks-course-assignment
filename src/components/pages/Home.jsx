@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react';
 import ResultPage from '../layout/ResultHome';
 import { BASE_URL } from '../../constants/api';
 import { Col, Container, Row } from 'react-bootstrap';
-import Heading from '../layout/Heading';
 
 const url = BASE_URL + "/wc/store/products";
-
+/**
+ * This function will print the welcome section and call the ResultHome with the data map as props.
+ * @returns <Home> 
+ */
 function Home() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -40,9 +42,8 @@ function Home() {
         return <div>An error occurred: {error}</div>
     }
     return (
-        <>
+        <><div className="wrapper">
             <section className='welcome'>
-                <Heading content="Welcome to our online store"></Heading>
             </section>
             <Container>
                 <Row gap={2}>
@@ -60,6 +61,7 @@ function Home() {
                     })}
                 </Row>
             </Container>
+        </div>
         </>
     );
 }

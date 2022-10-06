@@ -8,10 +8,10 @@
     mask-repeat: no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 200px;
     margin-top: -3%;
+    padding: 35%;
 
     @media(min-width: 769px) {
-        height: 400px;
+        padding: 23%;
     }
 }

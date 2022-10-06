@@ -1,42 +1,54 @@
-.btn-primary {
-    background-color: #0D0D0D;
-    color: #fff;
-    font-weight: 600;
-    width: 100px;
-    margin: 2% auto;
-    border-radius: 30px;
-    border-color: #0D0D0D;
-    moz-transition: all .4s ease-in-out;
+.btn {
+    background-color: getColor(border-color) !important;
+    color: getColor(third-color) !important;
+    font-weight: 600 !important;
+    width: 100px !important;
+    margin: 6% auto !important;
+    border-radius: 30px !important;
+    border-color: getColor(border-color) !important;
+    moz-transition: all .4s ease-in-out !important;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out !important;
+
+    @media (min-width:992px) {
+        font-size: 1.3rem !important;
+    }
 }
 
-.btn-primary:hover {
-    background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
+.btn:hover,
+.btn-secondary {
+    background-position: 100% 0 !important;
+    moz-transition: all .4s ease-in-out !important;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, #29323c, #485563, #4e4376);
-    box-shadow: 0 4px 10px 0 rgba(45, 54, 65, 0.75);
-    border: none;
+    transition: all .4s ease-in-out !important;
+    background-image: linear-gradient(to right, #29323c, #485563, #4e4376) !important;
+    box-shadow: 0 4px 10px 0 rgba(45, 54, 65, 0.75) !important;
+    border: none !important;
 }
 
-.btn-primary:focus {
-    outline: none;
-    background-color: #485563;
-    border: none;
-    box-shadow: 0 4px 10px 0 rgba(45, 54, 65, 0.75);
+.btn:focus,
+.active {
+    outline: none !important;
+    background-color: #485563 !important;
+    border: none !important;
+    box-shadow: 0 4px 10px 0 rgba(45, 54, 65, 0.75) !important;
+}
+
+.active {
+    @extend .btn;
+    text-decoration: underline !important;
 }
 
 .btn-navbar {
-    background-color: #0d0d0d00;
-    border: none;
+    background-color: getColor(border-color) !important;
+    border: none !important;
+    color: #fff !important;
 }
 
 .btn-navbar:focus {
-    background-color: #485563;
-    border: none;
-    box-shadow: none;
+    background-color: #485563 !important;
+    border: none !important;
+    box-shadow: none !important;
 }

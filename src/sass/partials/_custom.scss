@@ -1,0 +1,12 @@
+/* Color variables*/
+$colors: (
+    primary-color: #000,
+    secondary-color : #485563,
+    third-color: #fff,
+    shadow-color: #30384295,
+    borders-color: #0D0D0D,
+);
+
+@function getColor($color) {
+    @return map-get($colors, $color);
+}

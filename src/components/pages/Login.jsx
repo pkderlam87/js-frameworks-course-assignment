@@ -12,13 +12,17 @@ import { Container, FloatingLabel, Form } from 'react-bootstrap';
 
 
 const url = BASE_URL + TOKEN_PATH;
-
-
+/**
+ * YUP will verify the data requirements and show an error message if something is wrong 
+ */
 const schema = yup.object().shape({
     username: yup.string().required("Please enter your username"),
     password: yup.string().required("Please enter your password"),
 });
-
+/**
+ * This function has a form to the user login in the admin side.
+ * @returns <Login><Form>
+ */
 function Login() {
     const [submitting, setSubmitting] = useState(false);
     const [loginError, setLoginError] = useState(null);
@@ -28,13 +32,13 @@ function Login() {
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     });
-
+    //This useContext provider the token for authenticated users
     const [auth, setAuth] = useContext(AuthContext);
 
     async function onSubmit(data) {
         setSubmitting(true);
         setLoginError(null);
-
+        //If the user provides the correct username and password "auth" is updated, and the authenticated user goes to the admin page.  
         try {
             const response = await axios.post(url, data);
             console.log("response", response.data);
@@ -50,7 +54,9 @@ function Login() {
     }
 
     return (<>
-        <Container>
+        <Container className="wrapper">
+            <section className='welcome__other--pages'>
+            </section>
             <Heading>Log in</Heading>
             <form onSubmit={handleSubmit(onSubmit)}>
                 {loginError && <span>{loginError}</span>}
@@ -67,7 +73,7 @@ function Login() {
                     <Form.Control type="password" name="password" placeholder="Password" {...register("password")} />
                     {errors.password && <span>{errors.password.message}</span>}
                 </FloatingLabel>
-                <button className='btn btn-primary'>{submitting ? "Login in..." : "Login"}</button>
+                <button className='btn btn-secondary'>{submitting ? "Login in..." : "Login"}</button>
             </form>
         </Container>
     </>
