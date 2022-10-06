@@ -1,6 +1,6 @@
 # Clothes Store - JavaScript Framework 
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](https://github.com/pkderlam87/js-frameworks-course-assignment/blob/main/src/desktop.jpg)
 
 This project was a course assignment from the JavaScript Framework course at Noroff. The main objective was to create a React App with reusable components.
 
