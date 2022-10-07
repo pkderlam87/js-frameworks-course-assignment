@@ -36,7 +36,13 @@ For this app I used:
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:pkderlam87/js-frameworks-course-assignment
+git clone https://github.com/pkderlam87/js-frameworks-course-assignment.git
+```
+
+1.1. Open the directory
+
+```
+cd js-frameworks-course-assignment
 ```
 
 2. Install the dependencies:
