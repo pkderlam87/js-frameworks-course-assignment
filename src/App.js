@@ -14,6 +14,7 @@ import Login from "./components/pages/Login";
 import PageDetail from "./components/pages/Detail";
 import Admin from "./components/pages/Admin";
 import { AuthProvider } from "./components/context/AuthContext";
+import Footer from "./components/layout/Footer";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </AuthProvider>
+      <Footer />
     </>);
 }
 
